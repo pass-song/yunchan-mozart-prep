@@ -1,0 +1,291 @@
+{
+  "concert": {
+    "title": "모차르트 피아노 소나타 시즌2",
+    "performer": "임윤찬",
+    "date": "2026-11-26",
+    "venue": "김해문화의전당"
+  },
+  "recordings": {
+    "son-naive-2023": {
+      "label": "손열음 (토마토클래식)"
+    },
+    "lim-cliburn-2022": {
+      "label": "임윤찬 (반 클라이번 예선, 2022)"
+    }
+  },
+  "pieces": [
+    {
+      "id": "k282",
+      "k": "K.282",
+      "no": 4,
+      "key": "E♭장조",
+      "movements": [
+        {
+          "id": "k282-1",
+          "index": 1,
+          "title": "Adagio",
+          "score": "scores/sonata04-1.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "_mrNwOqwtw8",
+            "start": 0,
+            "end": 335
+          },
+          "timing": "timings/k282-1.son.json",
+          "sections": []
+        },
+        {
+          "id": "k282-2",
+          "index": 2,
+          "title": "Menuetto I & II",
+          "score": "scores/sonata04-2.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "_mrNwOqwtw8",
+            "start": 335,
+            "end": 578
+          },
+          "timing": "timings/k282-2.son.json",
+          "sections": []
+        },
+        {
+          "id": "k282-3",
+          "index": 3,
+          "title": "Allegro",
+          "score": "scores/sonata04-3.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "_mrNwOqwtw8",
+            "start": 578,
+            "end": null
+          },
+          "timing": "timings/k282-3.son.json",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "k333",
+      "k": "K.333",
+      "no": 13,
+      "key": "B♭장조",
+      "movements": [
+        {
+          "id": "k333-1",
+          "index": 1,
+          "title": "Allegro",
+          "score": "scores/sonata13-1.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "_ogIPi8UsQ8",
+            "start": 0,
+            "end": 435
+          },
+          "timing": "timings/k333-1.son.json",
+          "sections": []
+        },
+        {
+          "id": "k333-2",
+          "index": 2,
+          "title": "Andante cantabile",
+          "score": "scores/sonata13-2.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "_ogIPi8UsQ8",
+            "start": 435,
+            "end": 862
+          },
+          "timing": "timings/k333-2.son.json",
+          "sections": []
+        },
+        {
+          "id": "k333-3",
+          "index": 3,
+          "title": "Allegretto grazioso",
+          "score": "scores/sonata13-3.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "_ogIPi8UsQ8",
+            "start": 862,
+            "end": null
+          },
+          "timing": "timings/k333-3.son.json",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "k311",
+      "k": "K.311",
+      "no": 9,
+      "key": "D장조",
+      "movements": [
+        {
+          "id": "k311-1",
+          "index": 1,
+          "title": "Allegro con spirito",
+          "score": "scores/sonata09-1.krn",
+          "recordingId": "lim-cliburn-2022",
+          "audio": {
+            "type": "youtube",
+            "videoId": "3mJagcvhDt4",
+            "start": 2,
+            "end": 204
+          },
+          "timing": "timings/k311-1.lim.json",
+          "sections": []
+        },
+        {
+          "id": "k311-2",
+          "index": 2,
+          "title": "Andantino con espressione",
+          "score": "scores/sonata09-2.krn",
+          "recordingId": "lim-cliburn-2022",
+          "audio": {
+            "type": "youtube",
+            "videoId": "3mJagcvhDt4",
+            "start": 204,
+            "end": 511
+          },
+          "timing": "timings/k311-2.lim.json",
+          "sections": []
+        },
+        {
+          "id": "k311-3",
+          "index": 3,
+          "title": "Rondeau: Allegro",
+          "score": "scores/sonata09-3.krn",
+          "recordingId": "lim-cliburn-2022",
+          "audio": {
+            "type": "youtube",
+            "videoId": "3mJagcvhDt4",
+            "start": 511,
+            "end": null
+          },
+          "timing": "timings/k311-3.lim.json",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "k309",
+      "k": "K.309",
+      "no": 7,
+      "key": "C장조",
+      "movements": [
+        {
+          "id": "k309-1",
+          "index": 1,
+          "title": "Allegro con spirito",
+          "score": "scores/sonata07-1.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "MgFnm-9V6Yo",
+            "start": 0,
+            "end": 372
+          },
+          "timing": "timings/k309-1.son.json",
+          "sections": []
+        },
+        {
+          "id": "k309-2",
+          "index": 2,
+          "title": "Andante un poco adagio",
+          "score": "scores/sonata07-2.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "MgFnm-9V6Yo",
+            "start": 372,
+            "end": 730
+          },
+          "timing": "timings/k309-2.son.json",
+          "sections": []
+        },
+        {
+          "id": "k309-3",
+          "index": 3,
+          "title": "Rondeau: Allegretto grazioso",
+          "score": "scores/sonata07-3.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "MgFnm-9V6Yo",
+            "start": 730,
+            "end": null
+          },
+          "timing": "timings/k309-3.son.json",
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "k331",
+      "k": "K.331",
+      "no": 11,
+      "key": "A장조",
+      "movements": [
+        {
+          "id": "k331-1",
+          "index": 1,
+          "title": "Andante grazioso",
+          "score": [
+            "scores/sonata11-1a.krn",
+            "scores/sonata11-1b.krn",
+            "scores/sonata11-1c.krn",
+            "scores/sonata11-1d.krn",
+            "scores/sonata11-1e.krn",
+            "scores/sonata11-1f.krn",
+            "scores/sonata11-1g.krn"
+          ],
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "C-KMs991yUY",
+            "start": 0,
+            "end": 506
+          },
+          "timing": "timings/k331-1.son.json",
+          "sections": []
+        },
+        {
+          "id": "k331-2",
+          "index": 2,
+          "title": "Menuetto",
+          "score": "scores/sonata11-2.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "C-KMs991yUY",
+            "start": 506,
+            "end": 740
+          },
+          "timing": "timings/k331-2.son.json",
+          "sections": []
+        },
+        {
+          "id": "k331-3",
+          "index": 3,
+          "title": "Alla Turca",
+          "score": "scores/sonata11-3.krn",
+          "recordingId": "son-naive-2023",
+          "audio": {
+            "type": "youtube",
+            "videoId": "C-KMs991yUY",
+            "start": 740,
+            "end": null
+          },
+          "timing": "timings/k331-3.son.json",
+          "sections": []
+        }
+      ]
+    }
+  ]
+}

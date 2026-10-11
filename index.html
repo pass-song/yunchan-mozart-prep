@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>임윤찬 모차르트 예습</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <div id="title">불러오는 중…</div>
+        <div id="subtitle"></div>
+      </div>
+      <div class="scale" aria-label="악보 크기">
+        <button id="scale-down" type="button" aria-label="악보 작게">−</button>
+        <span id="scale"></span>
+        <button id="scale-up" type="button" aria-label="악보 크게">+</button>
+      </div>
+    </header>
+    <section id="player-bar">
+      <div id="yt-player"></div>
+      <div class="controls">
+        <div class="row">
+          <select id="movement" aria-label="악장"></select>
+          <button id="play-pause" type="button" disabled>재생</button>
+        </div>
+        <span id="status"></span>
+      </div>
+    </section>
+    <main id="score"></main>
+    <footer id="credit">
+      악보: © Craig Stuart Sapp, <a href="https://github.com/craigsapp/mozart-piano-sonatas">mozart-piano-sonatas</a>
+      (Alte Mozart-Ausgabe, 1878),
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · 원본 Humdrum을
+      <a href="https://www.verovio.org">Verovio</a>(LGPL-3.0)로 조판해 표시 · 영상: YouTube 각 채널
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

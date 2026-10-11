@@ -1,0 +1,11 @@
+node_modules/
+/dist/
+/audio/
+*.mp3
+*.flac
+*.wav
+*.m4a
+
+# 설계 문서는 로컬에만 둔다
+/DESIGN.md
+*.docx

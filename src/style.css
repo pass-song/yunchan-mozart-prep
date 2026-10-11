@@ -1,0 +1,26 @@
+:root { font-family: system-ui, sans-serif; color: #222; background: #fff; }
+body { margin: 0; height: 100vh; height: 100dvh; display: flex; flex-direction: column; }
+#header { padding: 8px 16px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+#title { font-size: 1.25rem; font-weight: 600; }
+#subtitle { font-size: 0.85rem; color: #666; }
+.scale { display: flex; gap: 6px; align-items: center; white-space: nowrap; }
+.scale button { width: 32px; height: 32px; font-size: 1.1rem; }
+#scale { min-width: 3em; text-align: center; font-variant-numeric: tabular-nums; font-size: 0.85rem; }
+#player-bar { display: flex; gap: 16px; align-items: flex-start; padding: 8px 16px; flex-wrap: wrap; }
+#player-bar iframe { width: 320px; height: 200px; } /* YouTube 정책: 최소 200×200 */
+.controls { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 200px; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+#movement { max-width: 100%; }
+#play-pause { font-size: 1rem; padding: 6px 16px; }
+#status { font-size: 0.85rem; color: #b00; }
+/* 악장 전체가 한 장. 이 영역만 세로로 스크롤한다 */
+#score { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; padding: 0 16px; -webkit-overflow-scrolling: touch; }
+#score svg { display: block; margin: 0 auto; }
+#score g.measure { cursor: pointer; }
+#credit { padding: 4px 16px; font-size: 0.75rem; color: #666; }
+
+@media (max-width: 600px) {
+  #header, #player-bar { padding: 6px 8px; }
+  #score { padding: 0 8px; }
+  #title { font-size: 1.05rem; }
+}
