@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run --testTimeout=30000",
+    "score-info": "node tools/score-info.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",

@@ -10,7 +10,7 @@ import { AnchorEditor } from '../src/sync/anchors';
 it('K.331 3악장: 마디 길이(4분음표)와 못갖춘 조각, 기준점 보간까지', async () => {
   const tk = new VerovioToolkit(await createVerovioModule());
   tk.setOptions({ inputFrom: 'humdrum' });
-  tk.loadData(fs.readFileSync('data/scores/sonata11-3.krn', 'utf8'));
+  tk.loadData(fs.readFileSync('data/scores/craigsapp-mozart/sonata11-3.krn', 'utf8'));
   const ids = buildMeasureIds(tk.getMEI());
   const dur = measureDurations(tk.renderToTimemap({ includeMeasures: true }), ids);
 

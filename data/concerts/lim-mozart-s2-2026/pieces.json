@@ -13,6 +13,14 @@
       "label": "임윤찬 (반 클라이번 예선, 2022)"
     }
   },
+  "scoreSources": [
+    {
+      "name": "Craig Stuart Sapp, mozart-piano-sonatas (Alte Mozart-Ausgabe, 1878)",
+      "url": "https://github.com/craigsapp/mozart-piano-sonatas",
+      "license": "CC BY-NC-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    }
+  ],
   "pieces": [
     {
       "id": "k282",
@@ -24,7 +32,7 @@
           "id": "k282-1",
           "index": 1,
           "title": "Adagio",
-          "score": "scores/sonata04-1.krn",
+          "score": "scores/craigsapp-mozart/sonata04-1.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -39,7 +47,7 @@
           "id": "k282-2",
           "index": 2,
           "title": "Menuetto I & II",
-          "score": "scores/sonata04-2.krn",
+          "score": "scores/craigsapp-mozart/sonata04-2.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -54,7 +62,7 @@
           "id": "k282-3",
           "index": 3,
           "title": "Allegro",
-          "score": "scores/sonata04-3.krn",
+          "score": "scores/craigsapp-mozart/sonata04-3.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -77,7 +85,7 @@
           "id": "k333-1",
           "index": 1,
           "title": "Allegro",
-          "score": "scores/sonata13-1.krn",
+          "score": "scores/craigsapp-mozart/sonata13-1.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -92,7 +100,7 @@
           "id": "k333-2",
           "index": 2,
           "title": "Andante cantabile",
-          "score": "scores/sonata13-2.krn",
+          "score": "scores/craigsapp-mozart/sonata13-2.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -107,7 +115,7 @@
           "id": "k333-3",
           "index": 3,
           "title": "Allegretto grazioso",
-          "score": "scores/sonata13-3.krn",
+          "score": "scores/craigsapp-mozart/sonata13-3.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -130,7 +138,7 @@
           "id": "k311-1",
           "index": 1,
           "title": "Allegro con spirito",
-          "score": "scores/sonata09-1.krn",
+          "score": "scores/craigsapp-mozart/sonata09-1.krn",
           "recordingId": "lim-cliburn-2022",
           "audio": {
             "type": "youtube",
@@ -145,7 +153,7 @@
           "id": "k311-2",
           "index": 2,
           "title": "Andantino con espressione",
-          "score": "scores/sonata09-2.krn",
+          "score": "scores/craigsapp-mozart/sonata09-2.krn",
           "recordingId": "lim-cliburn-2022",
           "audio": {
             "type": "youtube",
@@ -160,7 +168,7 @@
           "id": "k311-3",
           "index": 3,
           "title": "Rondeau: Allegro",
-          "score": "scores/sonata09-3.krn",
+          "score": "scores/craigsapp-mozart/sonata09-3.krn",
           "recordingId": "lim-cliburn-2022",
           "audio": {
             "type": "youtube",
@@ -183,7 +191,7 @@
           "id": "k309-1",
           "index": 1,
           "title": "Allegro con spirito",
-          "score": "scores/sonata07-1.krn",
+          "score": "scores/craigsapp-mozart/sonata07-1.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -198,7 +206,7 @@
           "id": "k309-2",
           "index": 2,
           "title": "Andante un poco adagio",
-          "score": "scores/sonata07-2.krn",
+          "score": "scores/craigsapp-mozart/sonata07-2.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -213,7 +221,7 @@
           "id": "k309-3",
           "index": 3,
           "title": "Rondeau: Allegretto grazioso",
-          "score": "scores/sonata07-3.krn",
+          "score": "scores/craigsapp-mozart/sonata07-3.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -237,13 +245,13 @@
           "index": 1,
           "title": "Andante grazioso",
           "score": [
-            "scores/sonata11-1a.krn",
-            "scores/sonata11-1b.krn",
-            "scores/sonata11-1c.krn",
-            "scores/sonata11-1d.krn",
-            "scores/sonata11-1e.krn",
-            "scores/sonata11-1f.krn",
-            "scores/sonata11-1g.krn"
+            "scores/craigsapp-mozart/sonata11-1a.krn",
+            "scores/craigsapp-mozart/sonata11-1b.krn",
+            "scores/craigsapp-mozart/sonata11-1c.krn",
+            "scores/craigsapp-mozart/sonata11-1d.krn",
+            "scores/craigsapp-mozart/sonata11-1e.krn",
+            "scores/craigsapp-mozart/sonata11-1f.krn",
+            "scores/craigsapp-mozart/sonata11-1g.krn"
           ],
           "recordingId": "son-naive-2023",
           "audio": {
@@ -259,7 +267,7 @@
           "id": "k331-2",
           "index": 2,
           "title": "Menuetto",
-          "score": "scores/sonata11-2.krn",
+          "score": "scores/craigsapp-mozart/sonata11-2.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",
@@ -274,7 +282,7 @@
           "id": "k331-3",
           "index": 3,
           "title": "Alla Turca",
-          "score": "scores/sonata11-3.krn",
+          "score": "scores/craigsapp-mozart/sonata11-3.krn",
           "recordingId": "son-naive-2023",
           "audio": {
             "type": "youtube",

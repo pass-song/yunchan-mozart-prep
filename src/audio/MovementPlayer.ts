@@ -18,9 +18,17 @@ export class MovementPlayer {
 
   constructor(
     private readonly source: AudioSource,
-    private readonly entries: MovementEntry[],
+    private entries: MovementEntry[],
   ) {
     source.onEnded(() => this.next());
+  }
+
+  /** 다른 공연의 악장 목록으로 바꾼다. 이어서 select()로 악장을 고른다 */
+  setEntries(entries: MovementEntry[]): void {
+    this.source.pause();
+    this.entries = entries;
+    this.current = 0;
+    this.pendingStart = null;
   }
 
   get index(): number { return this.current; }

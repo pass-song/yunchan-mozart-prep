@@ -13,7 +13,7 @@ beforeAll(async () => {
 function orders(file: string): PerformOrders {
   const tk = new VerovioToolkit(mod);
   tk.setOptions({ inputFrom: 'humdrum' });
-  tk.loadData(fs.readFileSync(`data/scores/${file}`, 'utf8'));
+  tk.loadData(fs.readFileSync(`data/scores/craigsapp-mozart/${file}`, 'utf8'));
   const mei = tk.getMEI();
   return buildPerformOrders(mei, buildMeasureIds(mei));
 }

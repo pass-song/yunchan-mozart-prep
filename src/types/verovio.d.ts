@@ -9,6 +9,7 @@ declare module 'verovio/esm' {
     constructor(module: unknown);
     setOptions(options: Record<string, unknown>): void;
     loadData(data: string): boolean;
+    loadZipDataBuffer(data: ArrayBuffer): boolean;
     getMEI(options?: Record<string, unknown>): string;
     getPageCount(): number;
     renderToSVG(pageNo?: number, xmlDeclaration?: boolean): string;

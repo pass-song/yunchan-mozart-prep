@@ -11,24 +11,57 @@ export interface Movement {
   id: string;
   index: number;
   title: string;
-  score: string | string[];
+  /** data/ 기준 악보 경로(.krn .musicxml .xml .mxl .mei). 여러 파일이면 이어 붙인다. 악보를 구할 수 없으면 null(영상만 재생) */
+  score: string | string[] | null;
   recordingId: string;
   audio: AudioSpec;
-  timing: string;
-  sections: { label: string; from: string; to: string }[];
+  /** 타이밍 맵 경로 (현재 화면에서 쓰지 않음) */
+  timing?: string;
+  sections?: { label: string; from: string; to: string }[];
 }
 
 export interface Piece {
   id: string;
-  k: string;
-  no: number;
-  key: string;
+  /** 화면 표기 이름. 없으면 k (예: "K.282") */
+  title?: string;
+  /** 작품 번호 (모차르트 쾨헬 번호 등) */
+  k?: string;
+  no?: number;
+  /** 조성 (예: "E♭장조") */
+  key?: string;
   movements: Movement[];
+}
+
+export function pieceName(piece: Piece): string {
+  return piece.title ?? piece.k ?? piece.id;
+}
+
+/** data/concerts/index.json: 첫 화면에 보일 공연 순서. 각 공연은 data/concerts/<id>/pieces.json */
+export interface ConcertIndex {
+  concerts: string[];
+}
+
+export function piecesPath(concertId: string): string {
+  return `concerts/${concertId}/pieces.json`;
+}
+
+export function scorePaths(movement: Movement): string[] {
+  if (!movement.score) return [];
+  return Array.isArray(movement.score) ? movement.score : [movement.score];
+}
+
+/** 악보 출처. 페이지 하단에 표기한다 */
+export interface ScoreSourceCredit {
+  name: string;
+  url: string;
+  license: string;
+  licenseUrl?: string;
 }
 
 export interface PiecesFile {
   concert: { title: string; performer: string; date: string; venue: string };
   recordings: Record<string, { label: string }>;
+  scoreSources?: ScoreSourceCredit[];
   pieces: Piece[];
 }
 

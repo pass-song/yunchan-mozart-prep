@@ -26,7 +26,7 @@ class FakeSource implements AudioSource {
   fireEnded(): void { this.ended.forEach((cb) => cb()); }
 }
 
-const pieces = JSON.parse(fs.readFileSync('data/pieces.json', 'utf8')) as PiecesFile;
+const pieces = JSON.parse(fs.readFileSync('data/concerts/lim-mozart-s2-2026/pieces.json', 'utf8')) as PiecesFile;
 const entries = flattenMovements(pieces);
 const indexOf = (id: string) => entries.findIndex((e) => e.movement.id === id);
 

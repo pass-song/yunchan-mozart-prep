@@ -2,6 +2,7 @@ import createVerovioModule from 'verovio/wasm-hum';
 import { VerovioToolkit } from 'verovio/esm';
 import { buildMeasureIds } from './measureIds';
 import { buildPerformOrders, type PerformOrders } from './performOrder';
+import { loadScore, type ScoreSource } from './scoreFormat';
 
 /** Verovio pageHeight 최댓값. 이보다 긴 악장은 여러 장이 되지만 이어 붙여 한 장처럼 보인다 */
 const MAX_PAGE_HEIGHT = 60000;
@@ -23,7 +24,7 @@ interface Segment {
 }
 
 /**
- * Verovio로 Humdrum 악보를 화면 폭에 맞춘 긴 한 장으로 그린다. 세로 스크롤로 본다.
+ * Verovio로 악보(Humdrum·MusicXML·MEI)를 화면 폭에 맞춘 긴 한 장으로 그린다. 세로 스크롤로 본다.
  * 폭이나 악보 크기(scale)가 바뀌면 줄바꿈을 다시 한다.
  */
 export class ScoreView {
@@ -47,7 +48,9 @@ export class ScoreView {
     new ResizeObserver(() => {
       clearTimeout(this.resizeTimer);
       this.resizeTimer = window.setTimeout(() => {
-        if (this.container.clientWidth !== this.lastWidth) this.relayout();
+        // 화면이 숨겨지면 폭이 0이 된다. 그때는 다시 그리지 않는다
+        const w = this.container.clientWidth;
+        if (w > 0 && w !== this.lastWidth) this.relayout();
       }, 150);
     }).observe(container);
   }
@@ -56,13 +59,24 @@ export class ScoreView {
     return new ScoreView(container, await createVerovioModule(), scale);
   }
 
-  /** Humdrum 파일(들)을 읽어 그리고 맨 위로 스크롤한다. 연주 순서와 마디 길이를 돌려준다. */
-  load(humdrums: string[]): ScoreInfo {
+  /** 악보 없이 안내 문구만 보인다 (악보를 구할 수 없는 곡) */
+  showMessage(message: string): void {
+    this.segments = [];
+    this.container.innerHTML = '';
+    const p = document.createElement('p');
+    p.className = 'score-message';
+    p.textContent = message;
+    this.container.append(p);
+    this.container.scrollTop = 0;
+  }
+
+  /** 악보 파일(들)을 읽어 그리고 맨 위로 스크롤한다. 연주 순서와 마디 길이를 돌려준다. */
+  load(sources: ScoreSource[]): ScoreInfo {
     const options = this.layoutOptions();
-    this.segments = humdrums.map((text) => {
+    this.segments = sources.map((source, i) => {
       const tk = new VerovioToolkit(this.module);
       tk.setOptions(options);
-      tk.loadData(text);
+      if (!loadScore(tk, source)) throw new Error(`악보를 읽을 수 없음 (${i + 1}번째 파일, ${source.format})`);
       return { tk, measureIds: buildMeasureIds(tk.getMEI()) };
     });
     this.render();
@@ -99,7 +113,6 @@ export class ScoreView {
   private layoutOptions(): Record<string, unknown> {
     this.lastWidth = this.container.clientWidth;
     return {
-      inputFrom: 'humdrum',
       scale: this.scale,
       pageWidth: Math.max(100, Math.floor((this.lastWidth * 100) / this.scale)),
       pageHeight: MAX_PAGE_HEIGHT,
